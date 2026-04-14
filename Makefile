@@ -4,9 +4,9 @@ build:
 
 run:
 	git pull
-	docker run --restart always -d -e ORG=https://github.com/raghudevopsb88 -e NAME=runner-1 -e TOKEN=$(runner_token) local/runner
-	docker run --restart always -d -e ORG=https://github.com/raghudevopsb88 -e NAME=runner-2 -e TOKEN=$(runner_token) local/runner
-	docker run --restart always -d -e ORG=https://github.com/raghudevopsb88 -e NAME=runner-3 -e TOKEN=$(runner_token) local/runner
+	docker run --name=runner-1 --restart always -d -e ORG=https://github.com/raghudevopsb88 -e NAME=runner-1 -e TOKEN=$(runner_token) local/runner
+	docker run --name=runner-2 --restart always -d -e ORG=https://github.com/raghudevopsb88 -e NAME=runner-2 -e TOKEN=$(runner_token) local/runner
+	docker run --name=runner-3 --restart always -d -e ORG=https://github.com/raghudevopsb88 -e NAME=runner-3 -e TOKEN=$(runner_token) local/runner
 
 
 
